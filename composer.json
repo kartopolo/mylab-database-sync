@@ -1,0 +1,40 @@
+{
+    "name": "mylab/database-sync",
+    "description": "Laravel package for MySQL to PostgreSQL database synchronization using SQL triggers",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "database", "sync", "cdc", "mysql", "postgresql", "replication"],
+    "authors": [
+        {
+            "name": "MyLab Development Team"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "illuminate/console": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MylabDatabaseSync\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MylabDatabaseSync\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MylabDatabaseSync\\DatabaseSyncServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
